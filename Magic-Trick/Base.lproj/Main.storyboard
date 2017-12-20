@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gVz-Ap-wa2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="UFJ-VT-Qfv">
+            <objects>
+                <viewController id="gVz-Ap-wa2" customClass="ViewController" customModule="Magic_Trick" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uXW-Vx-9vR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-DS-cbZ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Grm-h8-fF6">
+                                <rect key="frame" x="87" y="571" width="200" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="YPn-ov-UEH"/>
+                                    <constraint firstAttribute="width" constant="200" id="pTW-vE-rPn"/>
+                                </constraints>
+                                <state key="normal" title="Toss!"/>
+                                <connections>
+                                    <action selector="didTapToss:" destination="gVz-Ap-wa2" eventType="touchUpInside" id="q3e-s9-gNi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Juf-YW-cES">
+                                <rect key="frame" x="32" y="571" width="311" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="SW2-d9-hhq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uAI-4i-v90" firstAttribute="bottom" secondItem="jEP-DS-cbZ" secondAttribute="bottom" id="0iR-we-KPD"/>
+                            <constraint firstItem="Grm-h8-fF6" firstAttribute="centerX" secondItem="uXW-Vx-9vR" secondAttribute="centerX" id="7Eg-dD-t9P"/>
+                            <constraint firstItem="uAI-4i-v90" firstAttribute="bottom" secondItem="Juf-YW-cES" secondAttribute="bottom" constant="32" id="8YK-ct-yCm"/>
+                            <constraint firstItem="jEP-DS-cbZ" firstAttribute="leading" secondItem="uAI-4i-v90" secondAttribute="leading" id="DZl-zh-6aN"/>
+                            <constraint firstItem="Juf-YW-cES" firstAttribute="centerX" secondItem="uXW-Vx-9vR" secondAttribute="centerX" id="Fdr-iH-7UI"/>
+                            <constraint firstItem="uAI-4i-v90" firstAttribute="trailing" secondItem="jEP-DS-cbZ" secondAttribute="trailing" id="Zbe-fn-WD4"/>
+                            <constraint firstItem="jEP-DS-cbZ" firstAttribute="top" secondItem="uAI-4i-v90" secondAttribute="top" id="c7C-Ga-y3s"/>
+                            <constraint firstItem="uAI-4i-v90" firstAttribute="trailing" secondItem="Juf-YW-cES" secondAttribute="trailing" constant="32" id="cAT-Qn-fBh"/>
+                            <constraint firstItem="Juf-YW-cES" firstAttribute="leading" secondItem="uAI-4i-v90" secondAttribute="leading" constant="32" id="nIh-hU-GgL"/>
+                            <constraint firstItem="uAI-4i-v90" firstAttribute="bottom" secondItem="Grm-h8-fF6" secondAttribute="bottom" constant="32" id="olA-vf-zFk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uAI-4i-v90"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Juf-YW-cES" id="EVe-6R-rBi"/>
+                        <outlet property="sceneView" destination="jEP-DS-cbZ" id="Q2s-oS-SOb"/>
+                        <outlet property="tossButton" destination="Grm-h8-fF6" id="n07-dN-dra"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sD6-ZI-zqR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="61"/>
+        </scene>
+    </scenes>
+</document>
